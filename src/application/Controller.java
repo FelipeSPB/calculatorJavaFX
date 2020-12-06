@@ -5,12 +5,14 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 public class Controller {
 
-    Locale setLocal = new Locale("en","US");
-
+    Locale setLocal = new Locale("en", "US");
     String showUser = "";
 
 
@@ -61,41 +63,50 @@ public class Controller {
 
     @FXML
     private Button equalButton;
-    
+
     @FXML
     private Button decimalButton;
-    
+
     @FXML
     private Button clearButton;
-    
+
     @FXML
     private Button porcentageButton;
-    
-    
+
 
     public void addNumOne(ActionEvent actionEvent) {
+        if (Methods.checkShowUser(painel.getText())) {
         showUser += numberOne.getText();
         painel.setText(showUser);
+        }
     }
 
     public void addNumTwo(ActionEvent actionEvent) {
+        if (Methods.checkShowUser(painel.getText())) {
         showUser += numberTwo.getText();
         painel.setText(showUser);
+        }
     }
 
     public void addNumThree(ActionEvent actionEvent) {
+        if (Methods.checkShowUser(painel.getText())) {
         showUser += numberThree.getText();
         painel.setText(showUser);
+        }
     }
 
     public void addNumFour(ActionEvent actionEvent) {
+        if (Methods.checkShowUser(painel.getText())) {
         showUser += numberFour.getText();
         painel.setText(showUser);
+        }
     }
 
     public void addNumFive(ActionEvent actionEvent) {
-        showUser += numberFive.getText();
-        painel.setText(showUser);
+        if (Methods.checkShowUser(painel.getText())) {
+            showUser += numberFive.getText();
+            painel.setText(showUser);
+        }
     }
 
     public void addNumSix(ActionEvent actionEvent) {
@@ -104,34 +115,43 @@ public class Controller {
     }
 
     public void addNumSeven(ActionEvent actionEvent) {
+        if (Methods.checkShowUser(painel.getText())) {
         showUser += numberSeven.getText();
         painel.setText(showUser);
+        }
     }
 
     public void addNumEight(ActionEvent actionEvent) {
-        showUser += numberEight.getText();
-        painel.setText(showUser);
+            showUser += numberEight.getText();
+            painel.setText(showUser);
     }
 
     public void addNumNine(ActionEvent actionEvent) {
-        showUser += numberNine.getText();
-        painel.setText(showUser);
+        if (Methods.checkShowUser(painel.getText())) {
+           showUser += numberNine.getText();
+            painel.setText(showUser);
+    }
     }
 
     public void addNumZero(ActionEvent actionEvent) {
-        showUser += numberZero.getText();
-        painel.setText(showUser);
+        if (Methods.checkShowUser(painel.getText())) {
+            showUser += numberZero.getText();
+            painel.setText(showUser);
+        }
     }
 
     public void addDecimal(ActionEvent actionEvent) {
-        showUser += decimalButton.getText();
-        painel.setText(showUser);
-
+        if (Methods.checkShowUser(painel.getText())) {
+            showUser += decimalButton.getText();
+            painel.setText(showUser);
+        }
     }
 
     public void addXSymbol(ActionEvent actionEvent) {
+        if(Methods.checkShowUser(painel.getText())){
         showUser += multiplicationButton.getText();
         painel.setText(showUser);
+        }
     }
 
     public void clearViewer(ActionEvent actionEvent) {
@@ -144,21 +164,31 @@ public class Controller {
     }
 
     public void addDivideSymbol(ActionEvent actionEvent) {
-        showUser += divisionButton.getText();
-        painel.setText(showUser);
+            if(Methods.checkShowUser(painel.getText())){
+                showUser += divisionButton.getText();
+                painel.setText(showUser);
+        }
+
     }
 
     public void toCalculate(ActionEvent actionEvent) {
     }
 
     public void addPlusSymbol(ActionEvent actionEvent) {
-        showUser += plusButton.getText();
-        painel.setText(showUser);
+        if(Methods.checkShowUser(painel.getText())){
+            showUser += plusButton.getText();
+            painel.setText(showUser);
+        }
+
     }
 
 
     public void addMinusSymbol(ActionEvent actionEvent) {
-        showUser += minusButton.getText();
-        painel.setText(showUser);
+        if (Methods.checkShowUser(painel.getText())) {
+            showUser += minusButton.getText();
+            painel.setText(showUser);
+        }
+
     }
 }
+
