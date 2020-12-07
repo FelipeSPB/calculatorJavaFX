@@ -23,17 +23,22 @@ public interface Methods {
     }
 
     static boolean checkingDecimals(String expression){
-        int countDots = 0;
+        if(countCharacters(expression,".")>=2){
+            return false;
+        }
+        int checkDots=0;
         for (int i = 0; i < expression.length(); i++) {
             String charIndex = Character.toString(expression.charAt(i));
-            if(charIndex.equals(".")){
-                countDots++;
-                if(Character.toString(expression.charAt(i+1)).equals(".")){
+            if (charIndex.equals("+") || charIndex.equals("-") || charIndex.equals("x") || charIndex.equals("÷") || checkDots >= 1) {
+                if (countCharacters(expression.substring(0, i), ".") >= 1 || countCharacters(expression.substring(i), ".") >= 1) {
                     return false;
                 }
             }
-            if(countDots>=2){
-                return false;
+            if (charIndex.equals(".")) {
+                if (Character.toString(expression.charAt(i + 1)).equals(".")) {
+                    return false;
+                }
+                checkDots++;
             }
         }
         return true;
@@ -92,5 +97,18 @@ public interface Methods {
 
         return format.format(result).toString();
         }
+
+    static int countCharacters(String word, String character){
+        int result = 0;
+        for (int i = 0; i < word.length(); i++){
+            String charIndex=Character.toString(word.charAt(i));
+            if(charIndex.equals(character)){
+                result++;
+            }
+        }
+        return result;
     }
 
+
+
+}
