@@ -5,16 +5,14 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Locale;
-import static application.Methods.alreadyHasMathSymbol;
+
+import static application.Methods.*;
 
 public class Controller {
 
     Locale setLocal = new Locale("en", "US");
-    String showUser = "";
+    String expression = "";
 
 
     @FXML
@@ -76,118 +74,119 @@ public class Controller {
 
 
     public void addNumOne(ActionEvent actionEvent) {
-        if (Methods.checkShowUser(painel.getText())) {
-        showUser += numberOne.getText();
-        painel.setText(showUser);
+        if (Methods.checkExpressionLength(painel.getText())) {
+        expression += numberOne.getText();
+        painel.setText(expression);
         }
     }
 
     public void addNumTwo(ActionEvent actionEvent) {
-        if (Methods.checkShowUser(painel.getText())) {
-        showUser += numberTwo.getText();
-        painel.setText(showUser);
+        if (Methods.checkExpressionLength(painel.getText())) {
+        expression += numberTwo.getText();
+        painel.setText(expression);
         }
     }
 
     public void addNumThree(ActionEvent actionEvent) {
-        if (Methods.checkShowUser(painel.getText())) {
-        showUser += numberThree.getText();
-        painel.setText(showUser);
+        if (Methods.checkExpressionLength(painel.getText())) {
+        expression += numberThree.getText();
+        painel.setText(expression);
         }
     }
 
     public void addNumFour(ActionEvent actionEvent) {
-        if (Methods.checkShowUser(painel.getText())) {
-        showUser += numberFour.getText();
-        painel.setText(showUser);
+        if (Methods.checkExpressionLength(painel.getText())) {
+        expression += numberFour.getText();
+        painel.setText(expression);
         }
     }
 
     public void addNumFive(ActionEvent actionEvent) {
-        if (Methods.checkShowUser(painel.getText())) {
-            showUser += numberFive.getText();
-            painel.setText(showUser);
+        if (Methods.checkExpressionLength(painel.getText())) {
+            expression += numberFive.getText();
+            painel.setText(expression);
         }
     }
 
     public void addNumSix(ActionEvent actionEvent) {
-        showUser += numberSix.getText();
-        painel.setText(showUser);
+        expression += numberSix.getText();
+        painel.setText(expression);
     }
 
     public void addNumSeven(ActionEvent actionEvent) {
-        if (Methods.checkShowUser(painel.getText())) {
-        showUser += numberSeven.getText();
-        painel.setText(showUser);
+        if (Methods.checkExpressionLength(painel.getText())) {
+        expression += numberSeven.getText();
+        painel.setText(expression);
         }
     }
 
     public void addNumEight(ActionEvent actionEvent) {
-            showUser += numberEight.getText();
-            painel.setText(showUser);
+            expression += numberEight.getText();
+            painel.setText(expression);
     }
 
     public void addNumNine(ActionEvent actionEvent) {
-        if (Methods.checkShowUser(painel.getText())) {
-           showUser += numberNine.getText();
-            painel.setText(showUser);
+        if (Methods.checkExpressionLength(painel.getText())) {
+           expression += numberNine.getText();
+            painel.setText(expression);
         }
     }
 
     public void addNumZero(ActionEvent actionEvent) {
-        if (Methods.checkShowUser(painel.getText())) {
-            showUser += numberZero.getText();
-            painel.setText(showUser);
+        if (Methods.checkExpressionLength(painel.getText())) {
+            expression += numberZero.getText();
+            painel.setText(expression);
         }
     }
 
     public void addDecimal(ActionEvent actionEvent) {
-        if (Methods.checkShowUser(painel.getText())) {
-            showUser += decimalButton.getText();
-            painel.setText(showUser);
+        if (Methods.checkExpressionLength(painel.getText()) && checkingDecimals(expression)) {
+            expression += decimalButton.getText();
+            painel.setText(expression);
         }
     }
 
     public void addXSymbol(ActionEvent actionEvent) {
-        if(Methods.checkShowUser(painel.getText())  && !alreadyHasMathSymbol(showUser)){
-            showUser += multiplicationButton.getText();
-            painel.setText(showUser);
+        if(Methods.checkExpressionLength(painel.getText())  && !alreadyHasMathSymbol(expression)){
+            expression += multiplicationButton.getText();
+            painel.setText(expression);
         }
     }
 
     public void clearViewer(ActionEvent actionEvent) {
-        showUser = "";
+        expression = "";
         painel.setText("0");
     }
 
     public void calculatePorcentage(ActionEvent actionEvent) {
-        painel.setText(showUser);
+        painel.setText(expression);
     }
 
     public void addDivideSymbol(ActionEvent actionEvent) {
-            if(Methods.checkShowUser(painel.getText())  && !alreadyHasMathSymbol(showUser)){
-                showUser += divisionButton.getText();
-                painel.setText(showUser);
+            if(Methods.checkExpressionLength(painel.getText())  && !alreadyHasMathSymbol(expression)){
+                expression += divisionButton.getText();
+                painel.setText(expression);
         }
 
     }
 
     public void toCalculate(ActionEvent actionEvent) {
+        painel.setText(calculate(expression));
     }
 
     public void addPlusSymbol(ActionEvent actionEvent) {
-        if(Methods.checkShowUser(showUser) && !alreadyHasMathSymbol(showUser)){
-            showUser += plusButton.getText();
-            painel.setText(showUser);
+        if(Methods.checkExpressionLength(expression) && !alreadyHasMathSymbol(expression)){
+            expression += plusButton.getText();
+            painel.setText(expression);
         }
 
     }
 
 
     public void addMinusSymbol(ActionEvent actionEvent) {
-        if (Methods.checkShowUser(painel.getText())&& !alreadyHasMathSymbol(showUser)) {
-            showUser += minusButton.getText();
-            painel.setText(showUser);
+        if (Methods.checkExpressionLength(painel.getText())&& !alreadyHasMathSymbol(expression)) {
+            expression += minusButton.getText();
+            painel.setText(expression);
         }
 
     }
