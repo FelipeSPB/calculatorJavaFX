@@ -9,6 +9,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import static application.Methods.alreadyHasMathSymbol;
 
 public class Controller {
 
@@ -130,7 +131,7 @@ public class Controller {
         if (Methods.checkShowUser(painel.getText())) {
            showUser += numberNine.getText();
             painel.setText(showUser);
-    }
+        }
     }
 
     public void addNumZero(ActionEvent actionEvent) {
@@ -148,9 +149,9 @@ public class Controller {
     }
 
     public void addXSymbol(ActionEvent actionEvent) {
-        if(Methods.checkShowUser(painel.getText())){
-        showUser += multiplicationButton.getText();
-        painel.setText(showUser);
+        if(Methods.checkShowUser(painel.getText())  && !alreadyHasMathSymbol(showUser)){
+            showUser += multiplicationButton.getText();
+            painel.setText(showUser);
         }
     }
 
@@ -164,7 +165,7 @@ public class Controller {
     }
 
     public void addDivideSymbol(ActionEvent actionEvent) {
-            if(Methods.checkShowUser(painel.getText())){
+            if(Methods.checkShowUser(painel.getText())  && !alreadyHasMathSymbol(showUser)){
                 showUser += divisionButton.getText();
                 painel.setText(showUser);
         }
@@ -175,7 +176,7 @@ public class Controller {
     }
 
     public void addPlusSymbol(ActionEvent actionEvent) {
-        if(Methods.checkShowUser(painel.getText())){
+        if(Methods.checkShowUser(showUser) && !alreadyHasMathSymbol(showUser)){
             showUser += plusButton.getText();
             painel.setText(showUser);
         }
@@ -184,7 +185,7 @@ public class Controller {
 
 
     public void addMinusSymbol(ActionEvent actionEvent) {
-        if (Methods.checkShowUser(painel.getText())) {
+        if (Methods.checkShowUser(painel.getText())&& !alreadyHasMathSymbol(showUser)) {
             showUser += minusButton.getText();
             painel.setText(showUser);
         }
