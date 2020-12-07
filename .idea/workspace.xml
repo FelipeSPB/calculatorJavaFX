@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/calculator/application/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/calculator/application/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/calculator/application/Methods.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/calculator/application/Methods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Methods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/calculator/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/calculator/application/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +92,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="recentsLimit" value="5" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Felipe Biancalana\Desktop\calculator\src\props" />
+      <recent name="C:\Users\Felipe Biancalana\Desktop\calculator\src\application" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -201,22 +205,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607188455275" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1607371405814">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1607372684459">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607371405814" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1607371405813">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607372684459" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1607372684457">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607371405813" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1607371405812">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607372684457" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1607372684456">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607371405812" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1607371405813">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607372684456" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1607372684458">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607371405813" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607372684458" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1607289520717">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
