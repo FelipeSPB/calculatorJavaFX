@@ -164,6 +164,7 @@ public class Controller {
 
     public void calculatePorcentage(ActionEvent actionEvent) {
         painel.setText(porcentage(painel.getText()));
+        expression = painel.getText();
     }
 
     public void addDivideSymbol(ActionEvent actionEvent) {
@@ -176,6 +177,7 @@ public class Controller {
 
     public void toCalculate(ActionEvent actionEvent) {
         painel.setText(calculate(painel.getText()));
+        expression = painel.getText();
     }
 
     public void addPlusSymbol(ActionEvent actionEvent) {

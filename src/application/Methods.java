@@ -1,8 +1,10 @@
 package application;
 
 import java.text.DecimalFormat;
+import java.util.Locale;
 
 public interface Methods {
+
 
 
     static boolean checkExpressionLength(String expression) {
@@ -59,6 +61,7 @@ public interface Methods {
     }
 
     static String calculate(String expression) {
+        Locale.setDefault(new Locale("en","US"));
         DecimalFormat format = new DecimalFormat("#0.00");
         double result = 0;
         String numberActual = "0";
@@ -95,7 +98,6 @@ public interface Methods {
                 numberActual += charIndex;
                 }
              }
-
         return format.format(result);
         }
 
