@@ -133,7 +133,7 @@ public class Controller {
     }
 
     public void addNumZero(ActionEvent actionEvent) {
-        if (Methods.checkExpressionLength(painel.getText())) {
+        if (Methods.checkExpressionLength(painel.getText()) && !expression.equals("")) {
             expression += numberZero.getText();
             painel.setText(expression);
         }
@@ -147,7 +147,7 @@ public class Controller {
     }
 
     public void addXSymbol(ActionEvent actionEvent) {
-        if(Methods.checkExpressionLength(painel.getText())  && !alreadyHasMathSymbol(expression)){
+        if(Methods.checkExpressionLength(painel.getText())  && !alreadyHasMathSymbol(expression) && !expression.equals("")){
             expression += multiplicationButton.getText();
             painel.setText(expression);
         }
@@ -163,7 +163,7 @@ public class Controller {
     }
 
     public void addDivideSymbol(ActionEvent actionEvent) {
-            if(Methods.checkExpressionLength(painel.getText())  && !alreadyHasMathSymbol(expression)){
+            if(Methods.checkExpressionLength(painel.getText())  && !alreadyHasMathSymbol(expression) && !expression.equals("")){
                 expression += divisionButton.getText();
                 painel.setText(expression);
         }
@@ -171,20 +171,19 @@ public class Controller {
     }
 
     public void toCalculate(ActionEvent actionEvent) {
-        painel.setText(calculate(expression));
+        painel.setText(calculate(painel.getText()));
     }
 
     public void addPlusSymbol(ActionEvent actionEvent) {
-        if(Methods.checkExpressionLength(expression) && !alreadyHasMathSymbol(expression)){
+        if(Methods.checkExpressionLength(expression) && !alreadyHasMathSymbol(expression) && !expression.equals("")){
             expression += plusButton.getText();
             painel.setText(expression);
         }
 
     }
 
-
     public void addMinusSymbol(ActionEvent actionEvent) {
-        if (Methods.checkExpressionLength(painel.getText())&& !alreadyHasMathSymbol(expression)) {
+        if (Methods.checkExpressionLength(painel.getText())&& !alreadyHasMathSymbol(expression) && !expression.equals("")) {
             expression += minusButton.getText();
             painel.setText(expression);
         }
