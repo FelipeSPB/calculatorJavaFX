@@ -23,7 +23,7 @@ public interface Methods {
     }
 
     static boolean checkingDecimals(String expression){
-        if(countCharacters(expression,".") >=3 || Character.toString(expression.charAt(0)) == "."){
+        if(countCharacters(expression,".") >=3){
             return false;
         }
         int checkDots=0;
@@ -59,8 +59,8 @@ public interface Methods {
     }
 
     static String calculate(String expression) {
-        DecimalFormat format = new DecimalFormat("#.00");
-        Double result = 0.0;
+        DecimalFormat format = new DecimalFormat("#0.00");
+        double result = 0;
         String numberActual = "0";
         if (expression.equals(numberActual)){
             return expression;
@@ -110,5 +110,30 @@ public interface Methods {
         return result;
     }
 
-    
+    static String porcentage(String expression){
+        DecimalFormat format = new DecimalFormat("#0.00");
+        double result = 0.00;
+        String numberActual = "0";
+        for (int i = 0; i < expression.length(); i++) {
+            String charIndex = Character.toString(expression.charAt(i));
+            if(charIndex.equals("+")) {
+                return "0";
+                }
+            else if(charIndex.equals("-")) {
+                return "0";
+            }
+            else if(charIndex.equals("x")) {
+                result = checkNumber(numberActual) * (checkNumber(expression.substring(i+1))/100);
+            }
+            else if(charIndex.equals("÷")) {
+                return "0";
+            }
+            else{
+                numberActual += charIndex;
+            }
+        }
+
+        return format.format(result);
+    }
+
 }

@@ -140,6 +140,10 @@ public class Controller {
     }
 
     public void addDecimal(ActionEvent actionEvent) {
+        if (expression.equals("")){
+            expression += 0 + decimalButton.getText();
+            painel.setText(expression);
+        }
         if (Methods.checkExpressionLength(painel.getText()) && checkingDecimals(expression)) {
             expression += decimalButton.getText();
             painel.setText(expression);
@@ -159,7 +163,7 @@ public class Controller {
     }
 
     public void calculatePorcentage(ActionEvent actionEvent) {
-        painel.setText(expression);
+        painel.setText(porcentage(painel.getText()));
     }
 
     public void addDivideSymbol(ActionEvent actionEvent) {
